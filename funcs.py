@@ -142,11 +142,11 @@ def gme(file, msg, message, username, database):
                     message.reply_document(txtname, thumb=thumb, caption=caption)
                     database[username]["totalUpload"] += file_size
             else:
-                ink = DV.upload(file)
-                txtname = os.path.split(file)[1] + ".txt"
-                with open(txtname, "w") as t:
-                      t.write(link)
-                      t.close()
+                    link = DV.upload(file)
+                    txtname = os.path.split(file)[1] + ".txt"
+                    with open(txtname, "w") as t:
+                        t.write(link)
+                        t.close()
                     n = f"__☁️Subida finalizada__\n\n🔗{link}"
                     limite_msg(n, message)
                     message.reply_document(txtname, thumb=thumb, caption=caption)
