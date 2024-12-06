@@ -141,9 +141,9 @@ def gme(file, msg, message, username, database):
                     limite_msg(n, message)
                     message.reply_document(txtname, thumb=thumb, caption=caption)
                     database[username]["totalUpload"] += file_size
-                else:
-                    link = DV.upload(file)
-                    txtname = os.path.split(file)[1] + ".txt"
+            else:
+                link = DV.upload(file)
+                txtname = os.path.split(file)[1] + ".txt"
                     with open(txtname, "w") as t:
                         t.write(link)
                         t.close()
